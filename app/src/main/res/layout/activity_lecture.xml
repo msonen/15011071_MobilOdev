@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:minHeight="250dp"
+    android:visibility="visible"
     tools:context=".LectureActivity">
 
     <TextView
@@ -11,26 +13,30 @@
         android:layout_width="wrap_content"
         android:layout_height="32dp"
         android:layout_marginStart="66dp"
-        android:layout_marginTop="148dp"
+        android:layout_marginTop="160dp"
         android:layout_marginEnd="45dp"
         android:text="Student Count"
-        android:textAlignment="viewStart"
+        android:textAlignment="textStart"
+
         android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/count"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.305"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/textView2"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/count"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="34dp"
-        android:layout_marginEnd="88dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="112dp"
         android:text="Lecture Name"
-        android:textAlignment="viewStart"
+        android:textAlignment="textStart"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/divider5"
         app:layout_constraintTop_toBottomOf="@+id/name_lecture" />
 
     <TextView
@@ -38,9 +44,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="61dp"
+        android:layout_marginEnd="174dp"
+        android:layout_marginBottom="374dp"
         android:text="Avarage"
-        android:textAlignment="viewStart"
+        android:textAlignment="textStart"
         android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/count"
         app:layout_constraintTop_toBottomOf="@+id/count" />
 
@@ -60,7 +70,7 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="32dp"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="16dp"
         android:text="Name"
         android:textAlignment="viewStart"
         android:textSize="24sp"
@@ -78,5 +88,19 @@
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <View
+        android:id="@+id/divider5"
+        android:layout_width="1dp"
+        android:layout_height="715dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginBottom="8dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/name_lecture"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

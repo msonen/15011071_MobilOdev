@@ -42,7 +42,7 @@ public class showActivity extends AppCompatActivity {
 
     }
 
-    protected void btn_email(View e){
+    protected void btn_mail(View e){
         Intent intent = new Intent(Intent.ACTION_SEND);
         intent.setType("text/html");
         intent.putExtra(Intent.EXTRA_EMAIL, received.getSurname());
